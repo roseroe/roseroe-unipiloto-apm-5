@@ -1,0 +1,28 @@
+
+@media screen and (min-width: 0px) and (max-width: 480px) {
+ * {
+    color: red;
+    /*background: red;*/
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 765px) {
+ * {
+    color: green;
+    /*background: green;*/
+    }
+}
+
+@media screen and (min-width: 766px) and (max-width: 991px) {
+ * {
+    color: blue;
+    /*background: blue;*/
+    }
+}
+
+@media screen and (min-width: 992px) {
+ * {
+    color: orange;
+    /*background: orange;*/
+    }
+}
