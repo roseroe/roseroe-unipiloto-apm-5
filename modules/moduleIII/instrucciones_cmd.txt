@@ -1,0 +1,323 @@
+Your environment has been set up for using Node.js 4.6.0 (x64) and npm.
+
+C:\Users\Administrador>npm -v
+2.15.9
+
+C:\Users\Administrador>npm install -g typescript
+C:\Users\Administrador\AppData\Roaming\npm\tsserver -> C:\Users\Administrador\Ap
+pData\Roaming\npm\node_modules\typescript\bin\tsserver
+C:\Users\Administrador\AppData\Roaming\npm\tsc -> C:\Users\Administrador\AppData
+\Roaming\npm\node_modules\typescript\bin\tsc
+typescript@2.0.3 C:\Users\Administrador\AppData\Roaming\npm\node_modules\typescr
+ipt
+
+C:\Users\Administrador>npm install -g cordova
+npm WARN deprecated minimatch@2.0.10: Please update to minimatch 3.0.2 or higher
+ to avoid a RegExp DoS issue
+C:\Users\Administrador\AppData\Roaming\npm\cordova -> C:\Users\Administrador\App
+Data\Roaming\npm\node_modules\cordova\bin\cordova
+cordova@6.3.1 C:\Users\Administrador\AppData\Roaming\npm\node_modules\cordova
+├── underscore@1.7.0
+├── q@1.0.1
+├── nopt@3.0.1 (abbrev@1.0.9)
+├── update-notifier@0.5.0 (is-npm@1.0.0, semver-diff@2.1.0, chalk@1.1.3, string-
+length@1.0.1, repeating@1.1.3, configstore@1.4.0, latest-version@1.0.1)
+├── insight@0.8.3 (object-assign@4.1.0, async@1.5.2, tough-cookie@2.3.1, node-uu
+id@1.4.7, lodash.debounce@3.1.1, chalk@1.1.3, os-name@1.0.3, configstore@1.4.0,
+request@2.75.0, inquirer@0.10.1)
+├── cordova-common@1.4.1 (cordova-registry-mapper@1.1.15, unorm@1.4.1, q@1.4.1,
+underscore@1.8.3, semver@5.3.0, ansi@0.3.1, osenv@0.1.3, bplist-parser@0.1.1, mi
+nimatch@3.0.3, glob@5.0.15, shelljs@0.5.3, elementtree@0.1.6, plist@1.2.0)
+└── cordova-lib@6.3.1 (valid-identifier@0.0.1, cordova-registry-mapper@1.1.15, u
+norm@1.3.3, opener@1.4.1, properties-parser@0.2.3, semver@4.3.6, nopt@3.0.6, dep
+-graph@1.1.0, shelljs@0.3.0, glob@5.0.15, elementtree@0.1.6, xcode@0.8.9, reques
+t@2.47.0, cordova-serve@1.0.0, init-package-json@1.9.4, tar@1.0.2, aliasify@1.9.
+0, cordova-app-hello-world@3.10.0, cordova-fetch@1.0.1, plist@1.2.0, cordova-js@
+4.1.4, npm@2.15.11)
+
+C:\Users\Administrador>npm install -g ionic
+C:\Users\Administrador\AppData\Roaming\npm\ionic -> C:\Users\Administrador\AppDa
+ta\Roaming\npm\node_modules\ionic\bin\ionic
+ionic@2.1.1 C:\Users\Administrador\AppData\Roaming\npm\node_modules\ionic
+└── @ionic/app-generators@0.0.3
+
+C:\Users\Administrador>cd C:\Users\Administrador\Documents\GitHub\roseroe-unipil
+oto-apm-5\modules\moduleIII
+
+C:\Users\Administrador\Documents\GitHub\roseroe-unipiloto-apm-5\modules\moduleII
+I>ionic start lab6 blank --ts --v2
+--------------------------------
+Creating Ionic app in folder C:\Users\Administrador\Documents\GitHub\roseroe-uni
+piloto-apm-5\modules\moduleIII\lab6 based on blank project
+Downloading: https://github.com/driftyco/ionic2-app-base/archive/master.zip
+[=============================]  100%  0.0s
+Downloading: https://github.com/driftyco/ionic2-starter-blank/archive/master.zip
+
+[=============================]  100%  0.0s
+Installing npm packages...
+
+Adding initial native plugins
+[=============================]  100%  0.0s
+
+Saving your Ionic app state of platforms and plugins
+Saved platform
+Saved plugins
+Saved package.json
+
+? ♫ ? ♫  Your Ionic app is ready to go! ? ♫ ? ♫
+
+Some helpful tips:
+
+Run your app in the browser (great for initial development):
+  ionic serve
+
+Run on a device or simulator:
+  ionic run ios[android,browser]
+
+Test and share your app on device with Ionic View:
+  http://view.ionic.io
+
+Build better Enterprise apps with expert Ionic support:
+  http://ionic.io/enterprise
+
+New! Add push notifications, live app updates, and more with Ionic Cloud!
+  https://apps.ionic.io/signup
+
+
+New to Ionic? Get started here: http://ionicframework.com/docs/v2/getting-starte
+d
+
+
+C:\Users\Administrador\Documents\GitHub\roseroe-unipiloto-apm-5\modules\moduleII
+I>cd lab7
+
+C:\Users\Administrador\Documents\GitHub\roseroe-unipiloto-apm-5\modules\moduleII
+I\lab7>npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg> --save` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+name: (lab7)
+version: (1.0.0) 0.1.0
+description: lab7
+entry point: (index.js)
+test command:
+git repository: https://github.com/roseroe/roseroe-unipiloto-apm-5
+keywords:
+author: Edison Rosero
+license: (ISC) MIT
+About to write to C:\Users\Administrador\Documents\GitHub\roseroe-unipiloto-apm-
+5\modules\moduleIII\lab7\package.json:
+
+{
+  "name": "lab7",
+  "version": "0.1.0",
+  "description": "lab7",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roseroe/roseroe-unipiloto-apm-5.git"
+  },
+  "author": "Edison Rosero",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/roseroe/roseroe-unipiloto-apm-5/issues"
+  },
+  "homepage": "https://github.com/roseroe/roseroe-unipiloto-apm-5#readme"
+}
+
+
+Is this ok? (yes) yes
+
+C:\Users\Administrador\Documents\GitHub\roseroe-unipiloto-apm-5\modules\moduleII
+I\lab7>tsc -v
+Version 2.0.3
+
+C:\Users\Administrador\Documents\GitHub\roseroe-unipiloto-apm-5\modules\moduleII
+I\lab7>tsc -help
+Version 2.0.3
+Syntax:   tsc [options] [file ...]
+
+Examples: tsc hello.ts
+          tsc --outFile file.js file.ts
+          tsc @args.txt
+
+Options:
+ --allowJs                           Allow javascript files to be compiled.
+ --allowSyntheticDefaultImports      Allow default imports from modules with no
+default export. This does not affect code emit, just typechecking.
+ --allowUnreachableCode              Do not report errors on unreachable code.
+ --allowUnusedLabels                 Do not report errors on unused labels.
+ --baseUrl                           Base directory to resolve non-absolute modu
+le names.
+ -d, --declaration                   Generates corresponding '.d.ts' file.
+ --experimentalDecorators            Enables experimental support for ES7 decora
+tors.
+ --forceConsistentCasingInFileNames  Disallow inconsistently-cased references to
+ the same file.
+ -h, --help                          Print this message.
+ --init                              Initializes a TypeScript project and create
+s a tsconfig.json file.
+ --jsx KIND                          Specify JSX code generation: 'preserve' or
+'react'
+ --lib                               Specify library files to be included in the
+ compilation:
+                                       'es5' 'es6' 'es2015' 'es7' 'es2016' 'es20
+17' 'dom' 'webworker' 'scripthost' 'es2015.core' 'es2015.collection' 'es2015.gen
+erator' 'es2015.iterable' 'es2015.promise' 'es2015.proxy' 'es2015.reflect' 'es20
+15.symbol' 'es2015.symbol.wellknown' 'es2016.array.include' 'es2017.object' 'es2
+017.sharedmemory'
+ --mapRoot LOCATION                  Specify the location where debugger should
+locate map files instead of generated locations.
+ --maxNodeModuleJsDepth              The maximum dependency depth to search unde
+r node_modules and load JavaScript files
+ -m KIND, --module KIND              Specify module code generation: 'commonjs',
+ 'amd', 'system', 'umd' or 'es2015'
+ --moduleResolution                  Specify module resolution strategy: 'node'
+(Node.js) or 'classic' (TypeScript pre-1.6).
+ --newLine NEWLINE                   Specify the end of line sequence to be used
+ when emitting files: 'CRLF' (dos) or 'LF' (unix).
+ --noEmit                            Do not emit outputs.
+ --noEmitOnError                     Do not emit outputs if any errors were repo
+rted.
+ --noFallthroughCasesInSwitch        Report errors for fallthrough cases in swit
+ch statement.
+ --noImplicitAny                     Raise error on expressions and declarations
+ with an implied 'any' type.
+ --noImplicitReturns                 Report error when not all code paths in fun
+ction return a value.
+ --noImplicitThis                    Raise error on 'this' expressions with an i
+mplied 'any' type.
+ --noImplicitUseStrict               Do not emit 'use strict' directives in modu
+le output.
+ --noUnusedLocals                    Report errors on unused locals.
+ --noUnusedParameters                Report errors on unused parameters.
+ --outDir DIRECTORY                  Redirect output structure to the directory.
+
+ --outFile FILE                      Concatenate and emit output to single file.
+
+ --preserveConstEnums                Do not erase const enum declarations in gen
+erated code.
+ --pretty                            Stylize errors and messages using color and
+ context. (experimental)
+ -p DIRECTORY, --project DIRECTORY   Compile the project in the given directory.
+
+ --reactNamespace                    Specify the object invoked for createElemen
+t and __spread when targeting 'react' JSX emit
+ --removeComments                    Do not emit comments to output.
+ --rootDir LOCATION                  Specify the root directory of input files.
+Use to control the output directory structure with --outDir.
+ --skipLibCheck                      Skip type checking of declaration files.
+ --sourceMap                         Generates corresponding '.map' file.
+ --sourceRoot LOCATION               Specify the location where debugger should
+locate TypeScript files instead of source locations.
+ --strictNullChecks                  Enable strict null checks.
+ --suppressImplicitAnyIndexErrors    Suppress noImplicitAny errors for indexing
+objects lacking index signatures.
+ -t VERSION, --target VERSION        Specify ECMAScript target version: 'ES3' (d
+efault), 'ES5', or 'ES2015'
+ --traceResolution                   Enable tracing of the name resolution proce
+ss.
+ --types                             Type declaration files to be included in co
+mpilation.
+ -v, --version                       Print the compiler's version.
+ -w, --watch                         Watch input files.
+ @<file>                             Insert command line options and files from
+a file.
+
+C:\Users\Administrador\Documents\GitHub\roseroe-unipiloto-apm-5\modules\moduleII
+I\lab7>
+
+C:\Users\Administrador\Documents\GitHub\roseroe-unipiloto-apm-5\modules\moduleII
+I\lab7>cd C:\Users\Administrador\Documents\GitHub\roseroe-unipiloto-apm-5\module
+s\moduleIII\lab6
+
+C:\Users\Administrador\Documents\GitHub\roseroe-unipiloto-apm-5\modules\moduleII
+I\lab6>cd C:\Users\Administrador\Documents\GitHub\roseroe-unipiloto-apm-5\module
+s\moduleIII\lab7
+
+C:\Users\Administrador\Documents\GitHub\roseroe-unipiloto-apm-5\modules\moduleII
+I\lab7>tsc --init
+message TS6071: Successfully created a tsconfig.json file.
+
+C:\Users\Administrador\Documents\GitHub\roseroe-unipiloto-apm-5\modules\moduleII
+I\lab7>tsc index.ts
+
+C:\Users\Administrador\Documents\GitHub\roseroe-unipiloto-apm-5\modules\moduleII
+I\lab7>tsc -w
+08:32:28 - Compilation complete. Watching for file changes.
+08:33:07 - File change detected. Starting incremental compilation...
+index.ts(17,5): error TS2322: Type 'number' is not assignable to type 'string'.
+08:33:08 - Compilation complete. Watching for file changes.
+08:33:21 - File change detected. Starting incremental compilation...
+08:33:22 - Compilation complete. Watching for file changes.
+^C¿Desea terminar el trabajo por lotes (S/N)? S
+
+C:\Users\Administrador\Documents\GitHub\roseroe-unipiloto-apm-5\modules\moduleII
+I\lab7>cd ..
+
+C:\Users\Administrador\Documents\GitHub\roseroe-unipiloto-apm-5\modules\moduleII
+I>cd lab8
+
+C:\Users\Administrador\Documents\GitHub\roseroe-unipiloto-apm-5\modules\moduleII
+I\lab8>npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg> --save` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+name: (lab8) lab8
+version: (1.0.0) 0.1.0
+description: lab8
+entry point: (index.js)
+test command:
+git repository: https://github.com/roseroe/roseroe-unipiloto-apm-5
+keywords:
+author: Edison Rosero
+license: (ISC) MIT
+About to write to C:\Users\Administrador\Documents\GitHub\roseroe-unipiloto-apm-
+5\modules\moduleIII\lab8\package.json:
+
+{
+  "name": "lab8",
+  "version": "0.1.0",
+  "description": "lab8",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roseroe/roseroe-unipiloto-apm-5.git"
+  },
+  "author": "Edison Rosero",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/roseroe/roseroe-unipiloto-apm-5/issues"
+  },
+  "homepage": "https://github.com/roseroe/roseroe-unipiloto-apm-5#readme"
+}
+
+
+Is this ok? (yes) yes
+
+C:\Users\Administrador\Documents\GitHub\roseroe-unipiloto-apm-5\modules\moduleII
+I\lab8>tsc --init
+message TS6071: Successfully created a tsconfig.json file.
+
+C:\Users\Administrador\Documents\GitHub\roseroe-unipiloto-apm-5\modules\moduleII
+I\lab8>

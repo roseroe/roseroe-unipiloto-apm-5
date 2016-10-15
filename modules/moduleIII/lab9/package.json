@@ -1,0 +1,19 @@
+{
+  "name": "lab9",
+  "version": "0.1.0",
+  "description": "lab9",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roseroe/roseroe-unipiloto-apm-5.git"
+  },
+  "author": "Edison Rosero",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/roseroe/roseroe-unipiloto-apm-5/issues"
+  },
+  "homepage": "https://github.com/roseroe/roseroe-unipiloto-apm-5#readme"
+}
