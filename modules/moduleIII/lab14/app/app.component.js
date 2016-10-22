@@ -26,17 +26,39 @@ var AppComponent = (function () {
             app_pp: 700,
             total: 4100
         };
+        this.boolfestive = false;
+        this.boolairport = false;
+        this.boolapp_pp = false;
     }
     AppComponent.prototype.onSelect = function (valor) {
-        this.ride.total = this.ride.total + valor;
+        if (valor === this.ride.festives) {
+            if (!this.boolfestive) {
+                this.ride.total = this.ride.total + valor;
+            }
+            this.boolfestive = true;
+        }
+        if (valor === this.ride.airport) {
+            if (!this.boolairport) {
+                this.ride.total = this.ride.total + valor;
+            }
+            this.boolairport = true;
+        }
+        if (valor === this.ride.app_pp) {
+            if (!this.boolapp_pp) {
+                this.ride.total = this.ride.total + valor;
+            }
+            this.boolapp_pp = true;
+        }
         this.selected = this.ride.total;
     };
     AppComponent.prototype.onCalcular = function (unidades) {
-        this.ride.total = unidades * this.ride.default;
+        if (unidades > 50) {
+            this.ride.total = unidades * this.ride.default / 50;
+        }
         this.selected = this.ride.total;
-    };
-    AppComponent.prototype.onKey = function (event) {
-        this.selected = event;
+        this.boolairport = false;
+        this.boolapp_pp = false;
+        this.boolfestive = false;
     };
     AppComponent = __decorate([
         core_1.Component({

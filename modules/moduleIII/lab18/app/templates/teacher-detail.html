@@ -1,0 +1,15 @@
+<div *ngIf="teacher">
+<hr />
+    <label>Id: </label><br />
+    <input [(ngModel)]="teacher.id" placeholder="id"><br />
+    <label>Name: </label><br />
+    <input [(ngModel)]="teacher.name" placeholder="name"><br />
+    <label>Salones: </label><br />
+    <li *ngFor="let room of teacher.rooms, let i=index">
+        <input [(ngModel)]="teacher.rooms[i]" placeholder="room">
+    </li>
+    <label>Estudios: </label><br />
+    <li *ngFor="let studie of teacher.studies , let i=index">
+       <input [(ngModel)]="teacher.studies[i]" placeholder="studie">
+    </li>
+</div>

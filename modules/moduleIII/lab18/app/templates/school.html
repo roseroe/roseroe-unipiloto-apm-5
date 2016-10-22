@@ -1,0 +1,31 @@
+<h1>{{ titleStudents }}</h1>
+<ul>
+    <li *ngFor="let student of students"
+    (click)="onSelectStudent(student)"
+    >
+        Id: <span>{{student.id}}</span> ***** Nombre: {{student.name | uppercase }} ***** Grado: {{student.grade}} ***** Clase1: {{student.clasess[0]}}, Clase2: {{student.clasess[1]}}
+    </li>
+</ul>
+
+<student-detail [student]="selectedStudent"></student-detail>
+
+<h1>{{ titleTeachers }}</h1>
+<ul>
+    <li *ngFor="let teacher of teachers"
+    (click)="onSelectTeacher(teacher)"
+    >
+        Id: <span>{{teacher.id}}</span> ***** Nombre: {{teacher.name | uppercase }} 
+        <ul>
+        Salones:
+        	<li *ngFor="let room of teacher.rooms, let i=index">
+        		<input [(ngModel)]="teacher.rooms[i]" placeholder="clase">
+    		</li>
+    	Estudios:
+    		<li *ngFor="let studie of teacher.studies, let i=index">
+        		<input [(ngModel)]="teacher.studies[i]" placeholder="clase">
+    		</li>
+        </ul>
+    </li>
+</ul>
+
+<teacher-detail [teacher]="selectedTeacher"></teacher-detail>

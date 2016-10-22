@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
  	airport: number;
     app_pp: number;
     total: number;
+
  }
 
 @Component({
@@ -27,19 +28,47 @@ export class AppComponent {
     }
     
     selected: number;
-    
+    values: string;
+    boolfestive: boolean =false;
+    boolairport: boolean=false;
+    boolapp_pp: boolean=false;
+
     onSelect(valor: number) {
-      this.ride.total = this.ride.total + valor;
+      if(valor===this.ride.festives){
+         if(!this.boolfestive)
+         {
+             this.ride.total = this.ride.total + valor;
+         } 
+         this.boolfestive=true;
+      }
+      if(valor===this.ride.airport){
+        if(!this.boolairport)
+         {
+             this.ride.total = this.ride.total + valor;
+         } 
+        this.boolairport=true;
+      }
+      if(valor===this.ride.app_pp){
+         if(!this.boolapp_pp)
+         {
+             this.ride.total = this.ride.total + valor;
+         } 
+        this.boolapp_pp=true;
+      }
       this.selected = this.ride.total;
     }
+
     onCalcular(unidades: number)
     {
-      this.ride.total=unidades*this.ride.default;
-      this.selected = this.ride.total;
+      if(unidades>50)
+      {
+          this.ride.total=unidades*this.ride.default/50;
+      }
+      this.selected = this.ride.total; 
+      this.boolairport=false;
+      this.boolapp_pp=false;
+      this.boolfestive=false;
     }
-    onKey(event: number) {
-    this.selected = event
-  }
 }
 
 

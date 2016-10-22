@@ -1,0 +1,13 @@
+<div *ngIf="student">
+<hr />
+	<label>Id: </label><br />
+    <input [(ngModel)]="student.id" placeholder="id"><br />
+    <label>Name: </label><br />
+    <input [(ngModel)]="student.name" placeholder="name"><br />
+    <label>Grado: </label><br />
+    <input [(ngModel)]="student.grade" placeholder="grade"><br />
+    <label>Clases: </label><br />
+    <li *ngFor="let clase of student.clasess, let i=index">
+        <input [(ngModel)]="student.clasess[i]" placeholder="clase">
+    </li>
+</div>
