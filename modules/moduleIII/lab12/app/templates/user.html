@@ -1,0 +1,29 @@
+ 
+ <h1>{{user.name}}</h1><br />
+ <h2>{{user.id}}</h2><br />
+ <h2>{{user.addres}}</h2><br />
+ <h3>Prueba</h3>
+ <h2>{{user.phone}}</h2><br />
+ 
+ <div>
+	<hr />
+	<label for="">Name: </label>
+	<input type="text" [(ngModel)]="user.name" placeholder="Name"> <br />
+	<label>Id: </label><br />
+    <textarea [(ngModel)]="user.id" placeholder="identificacion"></textarea><br />
+    <label>Addres: </label><br />
+    <input [(ngModel)]="user.addres" placeholder="addres"><br />
+    <label>Phone: </label><br />
+    <input [(ngModel)]="user.phone" placeholder="phone"><br />
+  
+</div>
+
+
+<!--
+<h1>{{ title }}</h1>
+<ul>
+    <li *ngFor="let user of users">
+        <span>{{user.id}}</span> {{user.name | uppercase }} 
+    </li>
+</ul>
+-->

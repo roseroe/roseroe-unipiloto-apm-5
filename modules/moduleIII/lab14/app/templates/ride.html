@@ -1,0 +1,17 @@
+<h1>{{ title }}</h1>
+<ul>
+    <h5 (click)="onSelect(ride.units)" >Unidad Minima: {{ride.units}}</h5>
+    <h5 (click)="onSelect(ride.default)" >Default: {{ride.default}}</h5>
+    Unidades: 
+    <button (click)="onClickMe()">Click me!</button>
+    <input #box (keyup.enter)="values=box.value">
+    <h3 (click)="onSelect(ride.festives)" >Festivo: {{ride.festives}}</h3>
+    <h3 (click)="onSelect(ride.airport)" >Aereopuerto: {{ride.airport}}</h3>
+    <h3 (click)="onSelect(ride.app_pp)" >App-Puerta: {{ride.app_pp}}</h3>
+</ul>
+
+<div *ngIf="selected">
+<hr />
+    <label>Total: </label><br />
+    <input [(ngModel)]="selected" placeholder="name"><br />
+</div>
