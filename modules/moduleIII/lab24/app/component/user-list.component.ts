@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { User } from '../model/user';
 import { UserService } from '../service/user.service';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'my-app',
@@ -12,19 +13,25 @@ export class UserListComponent {
 
     title: string = "Mis Usuarios";
     users: User[];
-   
-    constructor(private userService: UserService){}
-    
     selectedUser: User;
+   
+    constructor(private router: Router, private userService: UserService){}
     
+    
+    getProducts() {
+        this.userService.getUsers().then(users => this.users = users);
+    }
+
     ngOnInit(){
-        this.userService.getUsers()
-        .then(users => this.users = users)
-        .catch(error => console.log(error));
+        this.getProducts();
     }
     
-    onSelectUser(stud: User) {
+    onSelect(stud: User) {
       this.selectedUser = stud;
+    }
+
+    gotoDetail(): void {
+        this.router.navigate(['user/detail/', this.selectedUser.id]);
     }
 }
 

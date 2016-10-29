@@ -1,0 +1,25 @@
+<h1>{{ title }}</h1>
+<ul>
+    <li *ngFor="let sales of salesInvoices"
+        [class.pepito]="sales === selectedSalesInvoice">
+        <input [(ngModel)]="sales.id" placeholder="clase">
+    </li>
+</ul>
+
+<!--<h1>{{ title }}</h1>
+<ul>
+    <li *ngFor="let salesinvoice of salesInvoices">
+        <input [(ngModel)]="salesinvoice" placeholder="clase">
+    </li>
+</ul>
+-->
+<!--
+<div *ngIf="selectedSalesInvoice">
+    <h2>
+        {{selectedSalesInvoice.id}} is my Sales Invoice
+    </h2>
+    <button (click)="gotoDetailInvoice()">View Details</button>
+</div>
+[class.pepito]="salesinvoice === selectedSalesInvoice"
+        (click)="onSelectInvoice(customer.salesInvoice[i])"
+-->

@@ -1,0 +1,15 @@
+<h1>{{ title }}</h1>
+<ul>
+    <li *ngFor="let customer of customers"
+        [class.pepito]="customer === selectedCustomer"
+        (click)="onSelect(customer)">
+        <span>{{customer.id}}</span> {{customer.name}}
+    </li>
+</ul>
+
+<div *ngIf="selectedCustomer">
+    <h2>
+        {{selectedCustomer.name | uppercase}} is my Customer
+    </h2>
+    <button (click)="gotoDetail()">View Details</button>
+</div>
