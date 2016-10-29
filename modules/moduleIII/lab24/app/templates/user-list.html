@@ -1,0 +1,10 @@
+<h1>{{ title }}</h1>
+<ul>
+    <li *ngFor="let user of users"
+    (click)="onSelectUser(user)"
+    >
+        <span>{{user.id}}</span> {{user.name | uppercase }} 
+    </li>
+</ul>
+
+<user-detail [user]="selectedUser"></user-detail>
