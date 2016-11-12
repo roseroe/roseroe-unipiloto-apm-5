@@ -1,0 +1,33 @@
+<h1>{{ title }}</h1>
+<hr />
+<div>
+    <label>User email:</label> <input #userName />
+    <button (click)="add(userName.value); userName.value=''">
+        Add
+    </button>
+</div>
+
+<ul>
+    <li *ngFor="let user of users"
+        [class.pepito]="user === selected"
+        (click)="onSelect(user)">
+        <span>{{user.id}}</span> {{user.firstname}}
+    </li>
+</ul>
+
+<div *ngIf="selected">
+    <h2>
+        {{selected.firstname | uppercase}} is my User
+    </h2>
+    <button (click)="gotoDetail()">View User</button>
+</div>
+<!--
+<div>
+    <label>User name:</label> <input #userName />
+    <button (click)="add(userName.value); userName.value=''">
+        Add
+    </button>
+</div>
+
+
+<user-detail [user]="selected"></user-detail>-->

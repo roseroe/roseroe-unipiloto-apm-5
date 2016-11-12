@@ -20,6 +20,10 @@ var LineItemService = (function () {
         return this.getLineItems()
             .then(function (lineitems) { return lineitems.find(function (lineitem) { return lineitem.lineNumber === id; }); });
     };
+    LineItemService.prototype.getProductDetail = function (id) {
+        return this.getLineItems()
+            .then(function (lineitems) { return lineitems.find(function (lineitem) { return lineitem.lineNumber === id; }).products; });
+    };
     LineItemService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [])

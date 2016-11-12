@@ -1,25 +1,15 @@
 <h1>{{ title }}</h1>
 <ul>
     <li *ngFor="let sales of salesInvoices"
-        [class.pepito]="sales === selectedSalesInvoice">
-        <input [(ngModel)]="sales.id" placeholder="clase">
+        [class.pepito]="sales === selectedSalesInvoice"
+        (click)="onSelectSaleInvoice(sales)">
+        <span>ID:{{sales.id}}, InvoiceAmount:{{sales.invoiceAmount}}, Tax:{{sales.tax}} </span>
     </li>
 </ul>
 
-<!--<h1>{{ title }}</h1>
-<ul>
-    <li *ngFor="let salesinvoice of salesInvoices">
-        <input [(ngModel)]="salesinvoice" placeholder="clase">
-    </li>
-</ul>
--->
-<!--
 <div *ngIf="selectedSalesInvoice">
     <h2>
-        {{selectedSalesInvoice.id}} is my Sales Invoice
+        {{selectedSalesInvoice.id}} is my Sale Invoice
     </h2>
-    <button (click)="gotoDetailInvoice()">View Details</button>
+    <button (click)="gotoDetailInvoice()">View Line Items</button>
 </div>
-[class.pepito]="salesinvoice === selectedSalesInvoice"
-        (click)="onSelectInvoice(customer.salesInvoice[i])"
--->

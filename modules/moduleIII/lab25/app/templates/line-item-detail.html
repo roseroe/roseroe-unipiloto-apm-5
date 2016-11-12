@@ -1,0 +1,15 @@
+<h1>{{ title }}</h1>
+<ul>
+    <li *ngFor="let product of products"
+        [class.pepito]="product === selectedProduct"
+        (click)="onSelectProduct(product)">
+        <span>Id:{{product.id}}, Name:{{product.name}} </span>
+    </li>
+</ul>
+
+<div *ngIf="selectedProduct">
+    <h2>
+        {{selectedProduct.id}} is my Product
+    </h2>
+   <!-- <button (click)="gotoDetailProduct()">View Products</button>-->
+</div>

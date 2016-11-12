@@ -7,6 +7,8 @@ import { ProductListComponent } from './component/product-list.component';
 import { AppRoutingModule} from "./routing/app-routing.module";
 import { HomeComponent} from "./component/home.component";
 import { CustomerDetailComponent } from './component/customer-detail.component';
+import { SalesInvoiceDetailComponent } from './component/sales-invoice-detail.component';
+import { LineItemDetailComponent } from './component/line-item-detail.component';
 import { ProductDetailComponent } from './component/product-detail.component';
 import {APP_BASE_HREF} from "@angular/common";
 
@@ -22,7 +24,9 @@ import {APP_BASE_HREF} from "@angular/common";
       ProductListComponent,
       HomeComponent,
       CustomerDetailComponent,
-      ProductDetailComponent
+      ProductDetailComponent,
+      SalesInvoiceDetailComponent,
+      LineItemDetailComponent
   ],
   providers: [
       {

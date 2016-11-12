@@ -20,6 +20,10 @@ var SalesInvoiceService = (function () {
         return this.getSalesInvoices()
             .then(function (salesinvoices) { return salesinvoices.find(function (salesinvoice) { return salesinvoice.id === id; }); });
     };
+    SalesInvoiceService.prototype.getLineItemDetail = function (id) {
+        return this.getSalesInvoices()
+            .then(function (salesinvoices) { return salesinvoices.find(function (salesinvoice) { return salesinvoice.id === id; }).lineItems; });
+    };
     SalesInvoiceService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [])

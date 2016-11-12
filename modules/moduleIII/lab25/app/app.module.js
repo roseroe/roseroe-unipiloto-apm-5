@@ -17,6 +17,8 @@ var product_list_component_1 = require('./component/product-list.component');
 var app_routing_module_1 = require("./routing/app-routing.module");
 var home_component_1 = require("./component/home.component");
 var customer_detail_component_1 = require('./component/customer-detail.component');
+var sales_invoice_detail_component_1 = require('./component/sales-invoice-detail.component');
+var line_item_detail_component_1 = require('./component/line-item-detail.component');
 var product_detail_component_1 = require('./component/product-detail.component');
 var common_1 = require("@angular/common");
 var AppModule = (function () {
@@ -35,7 +37,9 @@ var AppModule = (function () {
                 product_list_component_1.ProductListComponent,
                 home_component_1.HomeComponent,
                 customer_detail_component_1.CustomerDetailComponent,
-                product_detail_component_1.ProductDetailComponent
+                product_detail_component_1.ProductDetailComponent,
+                sales_invoice_detail_component_1.SalesInvoiceDetailComponent,
+                line_item_detail_component_1.LineItemDetailComponent
             ],
             providers: [
                 {

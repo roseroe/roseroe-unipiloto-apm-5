@@ -20,6 +20,10 @@ var CustomerService = (function () {
         return this.getCustomers()
             .then(function (customers) { return customers.find(function (customer) { return customer.id === id; }); });
     };
+    CustomerService.prototype.getCustomerSalesInvoice = function (id) {
+        return this.getCustomers()
+            .then(function (customers) { return customers.find(function (customer) { return customer.id === id; }).salesInvoice; });
+    };
     CustomerService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [])
