@@ -1,0 +1,30 @@
+ionic start lab4 blank --ts --v2 --id com.app.lab4 --appname "lab4"
+http://ionicframework.com/docs/v2/components/#cards
+
+Cors
+Postman
+Sdk de Android
+Jdk de java 1.8
+npm install -g cordova ionic
+ 
+sdk manager, para instalar los apis
+ 
+variables de entorno:
+JAVA_HOME
+ANDROID_HOME
+ 
+Ejemplos IONIC
+ 
+ionic start lab1 blank --ts --v2 --id com.app.lab1 --appname "lab1"
+ionic start lab4 sidemenu --ts --v2 --id com.app.lab4 --appname "lab4"
+ionic start lab3 tabs --ts --v2 --id com.app.lab3 --appname "lab3"
+ 
+ 
+ionic serve --lab
+
+adb devices
+ionic run android --target=idDevice
+ionic g page namePage
+ionic g provider serviceName
+
+ionic g page page3
