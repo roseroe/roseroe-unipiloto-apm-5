@@ -35,7 +35,15 @@
     		<ion-label>Poneh:</ion-label>
     		<ion-input [(ngModel)]="user.phone" placeholder="phone"></ion-input>
   </ion-item>
-  <button ion-button color="secondary" (click)="save()">Guardar</button>
-  <button ion-button color="secondary" (click)="delete()">Eliminar</button>
+  <p> 
+    <button ion-button color="danger" (click)="delete()" icon-left>
+      <ion-icon name='close'></ion-icon>
+      Eliminar
+    </button>
+    <button ion-button color="secondary" (click)="save()" icon-left>
+      <ion-icon name='arrow-forward'></ion-icon>
+      Guardar
+    </button>
+   </p>
   </div>
 </ion-content>

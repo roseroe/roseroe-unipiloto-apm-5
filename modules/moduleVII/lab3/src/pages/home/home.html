@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-fab left bottom>
+    <button ion-fab color="dark"><ion-icon name="arrow-dropup"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+ <!--
+ <p>
+    <button ion-button color="light" (click)="viewUsers()">Ver Usuarios</button>
+  </p>
+  <p>
+    <button ion-button color="light" (click)="viewProducts()">Ver Productos</button>
+  </p>
+-->
+   <p> 
+    <button ion-button color="secondary" (click)="viewUsers()" icon-left>
+      <ion-icon name="people"></ion-icon>
+      Ver Usuarios
+    </button>
+    </p>
+    <p>
+    <button ion-button color="secondary" (click)="viewProducts()" icon-left>
+      <ion-icon name="phone-portrait"></ion-icon>
+      Ver Productos
+    </button>
+   </p>
+
+
+</ion-content>

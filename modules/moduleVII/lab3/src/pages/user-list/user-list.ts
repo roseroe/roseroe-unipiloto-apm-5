@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { User } from '../../model/user';
 import { UserService } from "../../providers/user-service";
-import { NavController } from 'ionic-angular';
+import { NavController, ViewController, LoadingController } from 'ionic-angular';
 import { UserDetailPage} from '../user-detail/user-detail';
 
 /*
@@ -21,7 +21,16 @@ export class UserListPage {
     selected: User;
     users: User[];
 
-  constructor(public navCtrl: NavController, public userService: UserService) {}
+  constructor(public navCtrl: NavController, public userService: UserService, public viewCtrl: ViewController, public loadingCtrl: LoadingController) {}
+
+  doRefresh(refresher) {
+    console.log('Begin async operation', refresher);
+    this.getUsers();
+    setTimeout(() => {
+      console.log('Async operation has ended');
+      refresher.complete();
+    }, 2000);
+  }
 
   getUsers() {
         this.userService.getUsers()
@@ -36,11 +45,23 @@ export class UserListPage {
         );
     }
 
+
     onSelect(user: User){
         this.selected = user;
-         this.navCtrl.push(UserDetailPage, {
+        let loading = this.loadingCtrl.create({
+          content: "Please wait...",
+          duration: 60000,
+          dismissOnPageChange: true
+      });
+        this.gotoDetail(user);
+        loading.present();
+    }
+
+    gotoDetail(user: User)
+    {
+       this.navCtrl.push(UserDetailPage, {
             id: user.email
-          });
+        });
     }
     
 
@@ -59,6 +80,10 @@ export class UserListPage {
   ionViewDidLoad() {
     console.log('Hello UserListPage Page');
     this.getUsers();
+  }
+
+  dismiss() {
+    this.viewCtrl.dismiss();
   }
 
 }

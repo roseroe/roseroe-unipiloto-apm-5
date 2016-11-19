@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { User } from '../../model/user';
-import { NavController, NavParams  } from 'ionic-angular';
+import { NavController, NavParams, ViewController } from 'ionic-angular';
 import { UserService } from "../../providers/user-service";
 import { UserListPage} from '../user-list/user-list';
 
@@ -20,7 +20,7 @@ export class UserDetailPage {
 	title: string = "Usuario";
     user: User;
 
-  constructor(public navCtrl: NavController, public userService: UserService, public navParams: NavParams) {}
+  constructor(public navCtrl: NavController, public userService: UserService, public navParams: NavParams,  public viewCtrl: ViewController) {}
     
     
     getDetailUser() {
@@ -33,16 +33,18 @@ export class UserDetailPage {
     save(): void {
         this.userService.update(this.user)
             .subscribe(
-                response => {console.log(response); this.navCtrl.push(UserListPage)},
+              response => {console.log(response); this.viewCtrl.dismiss()},
                 err => { console.log(err)});
+             //response => {console.log(response); this.navCtrl.push(UserListPage)},
 
     }
 
     delete(): void {
         this.userService.delete(this.user)
         .subscribe(
-                response => {console.log(response); this.navCtrl.push(UserListPage)},
+              response => {console.log(response); this.viewCtrl.dismiss()},
                 err => { console.log(err)});           
+        //response => {console.log(response); this.navCtrl.push(UserListPage)},
     }
 
 
