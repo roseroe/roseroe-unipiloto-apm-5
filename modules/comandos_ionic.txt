@@ -15,16 +15,80 @@ ANDROID_HOME
  
 Ejemplos IONIC
  
-ionic start lab1 blank --ts --v2 --id com.app.lab1 --appname "lab1"
+ionic start lab5 blank --ts --v2 --id com.app.lab5 --appname "lab5"
 ionic start lab4 sidemenu --ts --v2 --id com.app.lab4 --appname "lab4"
-ionic start lab3 tabs --ts --v2 --id com.app.lab3 --appname "lab3"
+ionic start lab6 tabs --ts --v2 --id com.app.lab6 --appname "lab6"
  
- 
+
 ionic serve --lab
+
+crear proyecto:
+1- crear proyecto blank, sidemenu, o tabs
+2- agregar la plataforma
+3- instalar plugins
+
 
 adb devices
 ionic run android --target=idDevice
 ionic g page namePage
 ionic g provider serviceName
 
-ionic g page page3
+ionic g provider product-service
+
+agregar plataforma andoid:
+ionic platform add android
+
+instalar plugins
+ionic plugin "nombre plugin"
+ionic plugin add cordova-plugin-network-information
+ionic plugin add cordova-plugin-dialogs
+ionic plugin add cordova-plugin-geolocation
+
+
+
+ionic build android
+ionic run android --target=idDevice
+ionic run android --target=169.254.0.101:5555
+
+para borrar plugins:
+git status
+git commit -am "delete files"
+
+ionic plugin rm "nombre plugin"
+git commit -am "delete files"
+
+push notification:
+one signal
+amazon
+five base
+
+
+config.xml-><widget id="com.ionicframework.lab3513064">
+google maps api -> google developers
+
+// https://developers.google.com/maps/?hl=es-419.
+	
+ionic plugin add cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyD34fdoJ8qpoXImmZ6p8NKa0sKkHhLJ4SI" --variable API_KEY_FOR_IOS="AIzaSyD34fdoJ8qpoXImmZ6p8NKa0sKkHhLJ4SI"
+
+ionic plugin add cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyCekJFBpHoGT_emmszvLldhw1mvN4ciaYo" --variable API_KEY_FOR_IOS="AIzaSyCekJFBpHoGT_emmszvLldhw1mvN4ciaYo"
+
+
+
+
+verificar que google apis este instalado en el sdk
+
+geolocalizacion por javascript
+1) agregar
+index.html:
+<!-- https://developers.google.com/maps/documentation/javascript/get-api-key -->
+ 
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCekJFBpHoGT_emmszvLldhw1mvN4ciaYo"></script>
+
+
+2)instalar paquete:
+// npm install --save @types/googlemaps
+
+
+plugin Storage:
+ionic plugin add cordova-sqlite-storage
+
