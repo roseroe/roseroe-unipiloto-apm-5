@@ -1,14 +1,22 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+  <ion-navbar color="primary">
+    <ion-title>Productos</ion-title>
+    <ion-buttons right>
+      <button ion-button icon-only (click)="alertNewProduct()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
-
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+  <ion-list>
+    <ion-item *ngIf="products.length == 0">
+      Sin productos
+    </ion-item>
+    <ion-item-sliding *ngFor="let product of products; let i = index">
+      <ion-item>
+        <ion-input (change)="updateProduct(product, i)" [(ngModel)]="product.name"></ion-input>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
 </ion-content>
