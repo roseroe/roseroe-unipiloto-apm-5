@@ -109,3 +109,8 @@ product back log:
 sprint back log:
 burndown charts: toDo (para hacer), WIP(que esta haciendo) y Done (hecho)
 
+
+
+git pull origin roseroe
+git checkout roseroe
+git branch
