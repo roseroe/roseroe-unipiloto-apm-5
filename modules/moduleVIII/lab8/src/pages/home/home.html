@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+   <ion-fab left bottom>
+    <button ion-fab color="dark"><ion-icon name="arrow-dropup"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+   <!--<p> 
+    <button ion-button color="secondary" (click)="createUser()" icon-left>
+      <ion-icon name="people"></ion-icon>
+      Crear Usuario
+    </button>
+    </p>-->
+  <div>
+    <ion-item>
+      <ion-label>Name:</ion-label>
+      <ion-input #userName></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label>Phone:</ion-label>
+      <ion-input #userPhone></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label>Email:</ion-label>
+      <ion-input #userEmail></ion-input>
+  </ion-item>
+    <button ion-button color="light" (click)="add(userName.value,userPhone.value,userEmail.value)">Agregar Usuario</button>
+    <!--<button ion-button color="secondary" (click)="save()" icon-left>
+      <ion-icon name='arrow-forward'></ion-icon>
+      Guardar
+    </button>-->
+</div>
+<br/>
+<ion-list-header>
+      Lista de Usuarios
+    <ion-icon name="arrow-dropdown-circle"></ion-icon>
+</ion-list-header>
+<ion-list no-lines>
+  <ion-item *ngFor="let user of users">
+     <ion-icon name="arrow-forward"></ion-icon> {{user.name}}
+  </ion-item>
+</ion-list>
+</ion-content>

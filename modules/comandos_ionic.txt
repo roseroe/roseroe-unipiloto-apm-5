@@ -15,9 +15,9 @@ ANDROID_HOME
  
 Ejemplos IONIC
  
-ionic start lab5 blank --ts --v2 --id com.app.lab5 --appname "lab5"
-ionic start lab4 sidemenu --ts --v2 --id com.app.lab4 --appname "lab4"
-ionic start lab6 tabs --ts --v2 --id com.app.lab6 --appname "lab6"
+ionic start lab6 blank --ts --v2 --id com.app.lab6 --appname "lab6"
+ionic start lab7 sidemenu --ts --v2 --id com.app.lab7 --appname "lab7"
+ionic start lab8 tabs --ts --v2 --id com.app.lab8 --appname "lab8"
  
 
 ionic serve --lab
@@ -34,6 +34,7 @@ ionic g page namePage
 ionic g provider serviceName
 
 ionic g provider product-service
+ionic g page user-page
 
 agregar plataforma andoid:
 ionic platform add android
@@ -89,6 +90,22 @@ index.html:
 // npm install --save @types/googlemaps
 
 
-plugin Storage:
+plugin Storage:  launchair
 ionic plugin add cordova-sqlite-storage
+ionic g provider service
+
+ionic plugin rm cordova-sqlite-storage
+
+********************SCRUM*************************
+back log del producto objetivos del producto
+back log del sprint funcionalades
+sprint planning: para un sprint de 1 mes dura maximo 8 horas
+SPINT REVIEW: al finalizar el sprint revisar del back log que fue lo que paso se entrego todo? Incluir QA de 2 a 3 horas (2 semanas) 4 horas (4 semanas o 1 mes)
+Sprint retrospective: al finalizar el sprint fallas sin delante del product owner o cliente
+daily scrum meeting: diariamente que hice, que estoy haciendo, que voy a hacer sin el product owner
+
+artefactos:
+product back log:
+sprint back log:
+burndown charts: toDo (para hacer), WIP(que esta haciendo) y Done (hecho)
 
