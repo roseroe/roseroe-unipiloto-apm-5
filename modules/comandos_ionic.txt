@@ -95,6 +95,7 @@ ionic plugin add cordova-sqlite-storage
 ionic g provider service
 
 ionic plugin rm cordova-sqlite-storage
+ionic plugin add nombre --save
 
 ********************SCRUM*************************
 back log del producto objetivos del producto
