@@ -1,0 +1,38 @@
+<!--
+  Generated template for the UserDetail page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>user-detail</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>	
+	
+	<div *ngIf="user">
+    	<hr />
+      <ion-list>
+        <ion-item>
+          <ion-label stacked>Name:</ion-label>
+          <ion-input type="text" [(ngModel)]="user.name" placeholder="name"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Phone:</ion-label>
+          <ion-input type="text" [(ngModel)]="user.phone" placeholder="Phone"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Email:</ion-label>
+          <ion-input type="text" [(ngModel)]="user.email" placeholder="Email"></ion-input>
+        </ion-item>        
+      </ion-list>
+      <button ion-button color="secondary" (click)="save()">Save</button>
+      <button ion-button color="danger" (click)="delete()">Delete</button>
+	</div>
+
+</ion-content>

@@ -16,9 +16,10 @@ ANDROID_HOME
 Ejemplos IONIC
  
 ionic start lab6 blank --ts --v2 --id com.app.lab6 --appname "lab6"
-ionic start lab7 sidemenu --ts --v2 --id com.app.lab7 --appname "lab7"
-ionic start lab8 tabs --ts --v2 --id com.app.lab8 --appname "lab8"
+ionic start product-app sidemenu --ts --v2 --id com.app.product-app --appname "product-app"
+ionic start lab9 tabs --ts --v2 --id com.app.lab9 --appname "lab9"
  
+ionic start lab7 sidemenu --ts --v2 --id com.app.lab7 --appname "lab7"
 
 ionic serve --lab
 
@@ -115,3 +116,12 @@ burndown charts: toDo (para hacer), WIP(que esta haciendo) y Done (hecho)
 git pull origin roseroe
 git checkout roseroe
 git branch
+********************************************
+POSTMAN
+Body
+raw    JSON
+
+{
+ "email": "correo@correo.com",
+ "password": "789"
+}

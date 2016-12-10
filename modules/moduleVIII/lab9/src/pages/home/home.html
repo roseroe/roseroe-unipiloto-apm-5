@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+
+ <ion-label fixed>User Name:</ion-label>
+    <ion-input type="text" placeholder="User Name" #userName></ion-input>
+  <button ion-button color="dark"   (click)="add(userName.value); userName.value=''">Add</button>
+  <hr>    
+  <ion-list>
+    <ion-item *ngFor="let user of users" (click)="onSelect(user)">
+      <span>{{user.id}}</span> {{user.name}}
+    </ion-item>
+  </ion-list> 
+</ion-content>
