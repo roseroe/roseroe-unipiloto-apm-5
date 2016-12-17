@@ -150,4 +150,65 @@ https://slides.com/alejo8591
 chrome://inspect/#devices
 instalando sass:
 
+para poder ejecutar sass: (add ruby excecutables to your path)
+https://rubyinstaller.org/downloads
+
+Alistar App para publicación Android
+https://github.com/alejo8591/unipiloto-apm-5/wiki/Alistar-App-para-publicaci%C3%B3n-Android
+
+cordova plugin rm cordova-plugin-console
+cordova build --release android
+ (1 sola vez) keytool -genkey -v -keystore my-release-key.keystore -alias MiPrimerApp -keyalg RSA -keysize 2048 -validity 10000
+//clave 123456
+
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore C:/Users/Administrador/Documents/GitHub/roseroe-unipiloto-apm-5/modules/moduleVIII/lab9/platforms/android/build/outputs/apk/android-release-unsigned.apk MiPrimerApp 
+
+C:/Users/Administrador/Documents/GitHub/roseroe-unipiloto-apm-5/modules/moduleVIII/lab9/platforms/android/build/outputs/apk/android-release-unsigned.apk
+
+verificar platform-tools:
+C:\android\build-tools
+ver: platforms/android/androidManifest.xml android:targetSdkVersion para obtener la versión y asi ubicarse en build-tools del zipalign
+
+C:\android\build-tools\24.0.3\zipalign -v 4 C:/Users/Administrador/Documents/GitHub/roseroe-unipiloto-apm-5/modules/moduleVIII/lab9/platforms/android/build/outputs/apk/android-release-unsigned.apk C:/Users/Administrador/Documents/GitHub/roseroe-unipiloto-apm-5/modules/moduleVIII/lab9/platforms/android/build/outputs/apk/MyPrimerApp.apk
+zipalign -v 4 HelloWorld-release-unsigned.apk HelloWorld.apk
+
+
+
+Push Notification:
+https://onesignal.com/ nos sirve para push notification (android - ios) dar permisos:
+https://documentation.onesignal.com/docs/generate-a-google-server-api-key
+https://firebase.google.com/ --> Ir a la Consola -> Nuevo Proyecto->Añade Firebase a tu aplicación de Android
+->nombre del paquete: id del config.xml 
+->Certificado de Firma:
+keytool -list -keystore my-release-key.keystore 
+keytool -list keystore nombre.keystore -alias nombre_alias
+keytool -list -keystore nombre.keystore
+Huella Digital de Certificado (SHA1): B7:68:2B:29:5D:9B:C7:03:6F:3C:80:81:C4:62:B5:66:EB:12:59:10
+
+Copiar archivo google-services.json en platforms/android
+
+Copiar Clave de servidor (Google Server API Key)  e ID del remitente (Google Project Number) de Mensajeria en la Nuve y copiarlo al onesignal
+
+posterior a esto seleccionar Select your target SDK Ionic
+
+1. Install the SDK
+
+Seleccionar Ionic y ejecutar ionic plugin update onesignal-cordova-plugin
+
+2. Add required code al app.components
+Ionic2(TypeScript)
+var notificationOpenedCallback = function(jsonData) {
+    console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
+  };
+
+  window["plugins"].OneSignal
+    .startInit("YOUR_APPID", "YOUR_GOOGLE_PROJECT_NUMBER_IF_ANDROID")
+  	.handleNotificationOpened(notificationOpenedCallback)
+    .endInit();
+
+YOUR_APPID=Your App ID: 20729931-80ca-45af-b48a-a11d84589ff0 de One Signal
+YOUR_GOOGLE_PROJECT_NUMBER_IF_ANDROID = Id del Remitente de Firebase si 574293351514
+
+
+
 
