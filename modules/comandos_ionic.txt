@@ -16,7 +16,7 @@ ANDROID_HOME
 Ejemplos IONIC
  
 ionic start lab6 blank --ts --v2 --id com.app.lab6 --appname "lab6"
-ionic start product-app sidemenu --ts --v2 --id com.app.product-app --appname "product-app"
+ionic start lab11 sidemenu --ts --v2 --id com.app.lab11 --appname "lab11"
 ionic start lab9 tabs --ts --v2 --id com.app.lab9 --appname "lab9"
  
 ionic start lab7 sidemenu --ts --v2 --id com.app.lab7 --appname "lab7"
@@ -93,7 +93,7 @@ index.html:
 
 plugin Storage:  launchair
 ionic plugin add cordova-sqlite-storage
-ionic g provider service
+ionic g provider user-service-db
 
 ionic plugin rm cordova-sqlite-storage
 ionic plugin add nombre --save
@@ -125,3 +125,29 @@ raw    JSON
  "email": "correo@correo.com",
  "password": "789"
 }
+
+
+hockeyapp.net
+
+ionic resources
+ionic resources --icon
+icono: 192x192 px icon.png
+
+ionic resources --splash
+splash 2208x2208 px splash.png
+
+ - colocar iconos en resources con las dmiensiones especificadas
+ - ejecutar comando ionic resources
+ - en el app.component. plashscreen.show();
+
+reemplazar el contenido de la carpeta res ubicada en la raiz del proyecto en platfroms/adnroid/res
+por si no funciona:
+ir a la carpeta platforms/android/res y ubicar los respectivos archivos (resources/android/icon y splash) en las respectivas carpetas
+
+
+
+https://slides.com/alejo8591
+chrome://inspect/#devices
+instalando sass:
+
+
